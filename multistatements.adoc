@@ -4,18 +4,19 @@ We've recently added support for multistatements in query.
 .The Simple Case
 [source,cypher]
 ----
+CALL apoc.util.sleep(1000);
 CREATE ();
 CREATE ();
 CREATE ();
 ----
 
-You can cancel long runnable queries
+== You can cancel your long running queries
 
 .Long Running Query 
 [source,cypher]
 ----
 CALL apoc.util.sleep(500000);
-CREATE();
+CREATE ();
 ----
 
 == What if there's an error?
@@ -30,7 +31,6 @@ CREATE();
 ----
 
 == But wait there's more
-
 
 .Autoscroll
 [source,cypher]
@@ -63,3 +63,7 @@ CALL apoc.util.sleep(500);
 CALL apoc.util.sleep(500);
 CALL apoc.util.sleep(500);
 ----
+
+== That's it for this time
+
+Thanks for joining by the showcase!
