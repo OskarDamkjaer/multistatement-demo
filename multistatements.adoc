@@ -10,7 +10,8 @@ CREATE ();
 CREATE ();
 ----
 
-== You can cancel your long running queries
+== Long running queries
+You can cancel them.
 
 .Long Running Query 
 [source,cypher]
@@ -20,6 +21,7 @@ CREATE ();
 ----
 
 == What if there's an error?
+We handle those.
 
 .Query with an error
 [source,cypher]
@@ -32,7 +34,7 @@ CREATE();
 
 == But wait there's more
 
-.Autoscroll
+.Scroll into view
 [source,cypher]
 ----
 CALL apoc.util.sleep(500);
@@ -67,3 +69,6 @@ CALL apoc.util.sleep(500);
 == That's it for this time
 
 Thanks for joining by the showcase!
+
+image::{img}/thanks.png[]
+
