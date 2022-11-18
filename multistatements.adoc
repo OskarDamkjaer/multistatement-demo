@@ -1,4 +1,5 @@
 == Multi-statement execution in query
+We've recently added support for multistatements in query.
 
 .The Simple Case
 [source,cypher]
@@ -6,4 +7,54 @@
 CREATE ();
 CREATE ();
 CREATE ();
+----
+
+You can cancel long runnable queries
+
+.Long Running Query 
+[source,cypher]
+----
+CALL apoc.util.sleep(500000);
+CREATE();
+----
+
+== What if there's an error?
+
+.Query with an error
+[source,cypher]
+----
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CREATE NEW ERROR;
+CREATE();
+----
+
+== But wait there's more
+
+
+.Autoscroll
+[source,cypher]
+----
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
 ----
