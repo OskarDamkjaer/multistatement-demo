@@ -1,5 +1,5 @@
 == Multi-statement execution in query
-We've recently added support for multistatements in query.
+=== We've recently added support for multistatements in query.
 
 .The Simple Case
 [source,cypher]
@@ -9,7 +9,7 @@ CREATE ();
 CREATE ();
 ----
 
-You can cancel long runnable queries
+=== You can cancel long runnable queries
 
 .Long Running Query 
 [source,cypher]
@@ -35,6 +35,11 @@ CREATE();
 .Autoscroll
 [source,cypher]
 ----
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
+CALL apoc.util.sleep(500);
 CALL apoc.util.sleep(500);
 CALL apoc.util.sleep(500);
 CALL apoc.util.sleep(500);
